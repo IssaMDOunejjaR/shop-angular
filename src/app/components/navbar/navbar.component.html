@@ -1,0 +1,31 @@
+<nav class="border-b">
+  <div class="custom-container flex justify-between items-center py-4">
+    <h1 class="font-bold uppercase text-3xl">
+      E<span class="text-green-600">shop</span>
+    </h1>
+
+    <ul class="flex gap-x-4 items-center text-lg">
+      <li *ngFor="let route of routesList">
+        <a
+          routerLink="{{ route.path }}"
+          class="transition-all text-gray-400 hover:text-green-600"
+          routerLinkActive="!text-green-600"
+        >
+          {{ route.label }}
+        </a>
+      </li>
+    </ul>
+
+    <div class="flex gap-x-4">
+      <button>
+        <lucide-angular name="shopping-cart" />
+      </button>
+
+      <button
+        class="w-10 h-10 bg-slate-400 flex justify-center items-center rounded-full text-white font-bold"
+      >
+        IO
+      </button>
+    </div>
+  </div>
+</nav>

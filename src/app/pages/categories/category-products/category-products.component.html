@@ -1,0 +1,10 @@
+<section class="custom-container py-10">
+  <h2 class="text-4xl font-bold mb-8" *ngIf="!isLoading">
+    {{ category?.name }} Products
+  </h2>
+  <app-loader *ngIf="isLoading" />
+
+  <div *ngIf="!isLoading" class="grid grid-cols-4 gap-4">
+    <app-product-card *ngFor="let product of products" [data]="product" />
+  </div>
+</section>

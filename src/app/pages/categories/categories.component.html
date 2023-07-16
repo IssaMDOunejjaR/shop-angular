@@ -1,0 +1,7 @@
+<section class="custom-container py-10">
+  <app-loader *ngIf="isLoading" />
+
+  <div *ngIf="!isLoading" class="grid grid-cols-4 gap-4">
+    <app-category-card *ngFor="let category of categories" [data]="category" />
+  </div>
+</section>

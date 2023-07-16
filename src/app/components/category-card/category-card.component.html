@@ -1,0 +1,13 @@
+<a [routerLink]="'/categories/' + data?.id" class="relative h-[200px] block">
+  <img
+    [src]="data?.image"
+    [alt]="data?.name"
+    class="absolute inset-0 w-full h-full -z-10"
+  />
+
+  <h2
+    class="w-full h-full bg-black/50 text-white font-bold flex items-center justify-center text-3xl"
+  >
+    {{ data?.name }}
+  </h2>
+</a>
